@@ -1,0 +1,15 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit) = "addZip(f); f.reset()">
+    <div class="form-group">
+      <label for="zip">Please Enter a Zip Code: </label>
+      <input type="text" class="form-control" id="zip" name="zip" required ngModel>
+    </div>
+
+    <button type="submit"  class="btn">Submit</button>
+    {{message}}
+  </form>
+
+  {{zipCode}}
+  {{weatherType}}
+</div>
+

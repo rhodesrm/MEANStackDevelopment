@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+  <header>
+    <!--  banner for Weather Viewer -->
+    <img width=100%;
+         alt="Weather Viewer" src="https://i.imgur.com/VQHbKuQ.jpg">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </header>
+
+</div>
+
+<div>
+
+  <app-zipcode-form></app-zipcode-form>
+
+  <ul>
+    <li *ngFor="let currentDescription of descriptions">
+      <label (click)="selectDescription(currentDescription)">
+        <div>
+          The weather at
+          <span style="color:indianred">{{currentDescription.zip}} </span> is:
+          <span style="color:seagreen"> {{currentDescription.wx_desc}} </span>
+        </div> <pre></pre>
+      </label>
+    </li>
+  </ul>
+
+</div>
+
